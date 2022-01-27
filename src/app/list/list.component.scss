@@ -1,0 +1,31 @@
+#datatable {
+    position: relative;
+    width: 100%;
+}
+.tablecontainer {
+    position: relative;
+    width: 80vw;
+    left: 10vw;
+    height: 80vh;
+    top: 10vh;
+    overflow-y: scroll;
+    border-radius: 20px;
+}
+
+#savebutton {
+    float: left;
+    height: 100%;
+    width: 20%;
+}
+#filterbutton {
+    float: right;
+    height: 100%;
+    width: 20%;
+}
+.buttoncontainer {
+    position: fixed;
+    width: 80vw;
+    left: 10vw;
+    height: 5vh;
+    top: 91vh;
+}

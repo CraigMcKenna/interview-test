@@ -1,0 +1,29 @@
+<div class="tablecontainer">
+    <table mat-table [dataSource]="data" id="datatable">
+      <ng-container matColumnDef="Year">
+        <th mat-header-cell *matHeaderCellDef> Year </th>
+        <td mat-cell *matCellDef="let d"> {{d.year}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Country">
+        <th mat-header-cell *matHeaderCellDef> Country </th>
+        <td mat-cell *matCellDef="let d"> {{d.country}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Operator">
+        <th mat-header-cell *matHeaderCellDef> Operator </th>
+        <td mat-cell *matCellDef="let d"> {{d.operator}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Formal Well Name">
+        <th mat-header-cell *matHeaderCellDef> Formal Well Name </th>
+        <td mat-cell *matCellDef="let d"> {{d.formal_well_name}} </td>
+      </ng-container>
+      <ng-container>
+        <tr mat-header-row *matHeaderRowDef="columns"></tr>
+        <tr mat-row *matRowDef="let myRowData; columns: columns"></tr>
+      </ng-container>
+    </table>
+</div>
+
+<div class="buttoncontainer">
+    <button mat-raised-button id="savebutton" color="primary" (click)="save()">Save</button>
+    <button mat-raised-button id="filterbutton" color="accent" (click)="sendItem('filter')">Filter</button>
+</div>
